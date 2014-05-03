@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_projects = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_IO = new System.Windows.Forms.Label();
-            this.btn_open = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
             this.btn_import = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_open = new System.Windows.Forms.Button();
+            this.lbl_IO = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_removeProject = new System.Windows.Forms.Button();
             this.btn_editProject = new System.Windows.Forms.Button();
             this.btn_addProject = new System.Windows.Forms.Button();
             this.lbl_projectsManagement = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_projects)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_projects
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(714, 445);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_projects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_projects.Location = new System.Drawing.Point(12, 12);
+            this.dgv_projects.Name = "dgv_projects";
+            this.dgv_projects.Size = new System.Drawing.Size(714, 445);
+            this.dgv_projects.TabIndex = 0;
             // 
             // panel1
             // 
@@ -65,23 +65,14 @@
             this.panel1.Size = new System.Drawing.Size(145, 96);
             this.panel1.TabIndex = 1;
             // 
-            // lbl_IO
+            // btn_import
             // 
-            this.lbl_IO.AutoSize = true;
-            this.lbl_IO.Location = new System.Drawing.Point(3, 0);
-            this.lbl_IO.Name = "lbl_IO";
-            this.lbl_IO.Size = new System.Drawing.Size(140, 13);
-            this.lbl_IO.TabIndex = 0;
-            this.lbl_IO.Text = "File IO for project collections";
-            // 
-            // btn_open
-            // 
-            this.btn_open.Location = new System.Drawing.Point(3, 16);
-            this.btn_open.Name = "btn_open";
-            this.btn_open.Size = new System.Drawing.Size(135, 23);
-            this.btn_open.TabIndex = 1;
-            this.btn_open.Text = "Open";
-            this.btn_open.UseVisualStyleBackColor = true;
+            this.btn_import.Location = new System.Drawing.Point(3, 62);
+            this.btn_import.Name = "btn_import";
+            this.btn_import.Size = new System.Drawing.Size(135, 23);
+            this.btn_import.TabIndex = 3;
+            this.btn_import.Text = "Import";
+            this.btn_import.UseVisualStyleBackColor = true;
             // 
             // btn_save
             // 
@@ -92,14 +83,23 @@
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
             // 
-            // btn_import
+            // btn_open
             // 
-            this.btn_import.Location = new System.Drawing.Point(3, 62);
-            this.btn_import.Name = "btn_import";
-            this.btn_import.Size = new System.Drawing.Size(135, 23);
-            this.btn_import.TabIndex = 3;
-            this.btn_import.Text = "Import";
-            this.btn_import.UseVisualStyleBackColor = true;
+            this.btn_open.Location = new System.Drawing.Point(3, 16);
+            this.btn_open.Name = "btn_open";
+            this.btn_open.Size = new System.Drawing.Size(135, 23);
+            this.btn_open.TabIndex = 1;
+            this.btn_open.Text = "Open";
+            this.btn_open.UseVisualStyleBackColor = true;
+            // 
+            // lbl_IO
+            // 
+            this.lbl_IO.AutoSize = true;
+            this.lbl_IO.Location = new System.Drawing.Point(3, 0);
+            this.lbl_IO.Name = "lbl_IO";
+            this.lbl_IO.Size = new System.Drawing.Size(140, 13);
+            this.lbl_IO.TabIndex = 0;
+            this.lbl_IO.Text = "File IO for project collections";
             // 
             // panel2
             // 
@@ -159,7 +159,7 @@
             this.ClientSize = new System.Drawing.Size(889, 469);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_projects);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(905, 507);
@@ -168,7 +168,7 @@
             this.Name = "Form1";
             this.Text = "Project Manager - Matthew Wood";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_projects)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -179,7 +179,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_projects;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_import;
         private System.Windows.Forms.Button btn_save;
