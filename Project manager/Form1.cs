@@ -19,13 +19,18 @@ namespace Project_manager
             Project test = new Project("Test", "This is a test.", "Matthew Wood");
             test.description += " This was added.";
             MessageBox.Show(test.description);
+            test.addContributer("Matthew Wood");
+            test.addContributer("Liam Allan");
             mainProjects.Add(test);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             dgv_projects.DataSource = mainProjects;
-            dgv_projects.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dgv_projects.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgv_projects.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dgv_projects.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dgv_projects.Columns[5].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgv_projects.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgv_projects.Columns[1].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
