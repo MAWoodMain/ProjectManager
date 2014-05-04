@@ -11,6 +11,7 @@ namespace Project_manager
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        public static List<Project> Projects = new List<Project>();
         [STAThread]
         static void Main()
         {

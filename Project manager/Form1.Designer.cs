@@ -50,7 +50,7 @@
             this.dgv_projects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_projects.Location = new System.Drawing.Point(12, 12);
             this.dgv_projects.Name = "dgv_projects";
-            this.dgv_projects.Size = new System.Drawing.Size(714, 445);
+            this.dgv_projects.Size = new System.Drawing.Size(946, 445);
             this.dgv_projects.TabIndex = 0;
             // 
             // panel1
@@ -60,7 +60,7 @@
             this.panel1.Controls.Add(this.btn_save);
             this.panel1.Controls.Add(this.btn_open);
             this.panel1.Controls.Add(this.lbl_IO);
-            this.panel1.Location = new System.Drawing.Point(732, 12);
+            this.panel1.Location = new System.Drawing.Point(964, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(145, 96);
             this.panel1.TabIndex = 1;
@@ -82,6 +82,7 @@
             this.btn_save.TabIndex = 2;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_open
             // 
@@ -108,7 +109,7 @@
             this.panel2.Controls.Add(this.btn_editProject);
             this.panel2.Controls.Add(this.btn_addProject);
             this.panel2.Controls.Add(this.lbl_projectsManagement);
-            this.panel2.Location = new System.Drawing.Point(732, 114);
+            this.panel2.Location = new System.Drawing.Point(964, 114);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(145, 96);
             this.panel2.TabIndex = 4;
@@ -156,15 +157,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 469);
+            this.ClientSize = new System.Drawing.Size(1121, 469);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv_projects);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(905, 507);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(905, 507);
             this.Name = "Form1";
             this.Text = "Project Manager - Matthew Wood";
             this.Load += new System.EventHandler(this.Form1_Load);
