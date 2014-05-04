@@ -163,7 +163,9 @@
             this.Controls.Add(this.dgv_projects);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1137, 507);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1137, 507);
             this.Name = "Form1";
             this.Text = "Project Manager - Matthew Wood";
             this.Load += new System.EventHandler(this.Form1_Load);
