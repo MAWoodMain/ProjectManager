@@ -90,6 +90,7 @@ namespace Project_manager
             System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(Program.Projects.GetType());
             System.IO.StreamReader reader = new System.IO.StreamReader("test.pmd");
             Program.Projects.AddRange((List<Project>)serializer.Deserialize(reader));
+            reader.Close();
             INIT_dataGridView();
         }
 
