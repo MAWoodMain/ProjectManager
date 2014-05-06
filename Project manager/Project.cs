@@ -37,10 +37,6 @@ namespace Project_manager
 
         public Project() // Blank constructor for serialization. 
         {
-            ProjectCreationTime = DateTime.Now;
-            ProjectLastEditTime = DateTime.Now;
-            projectContributors = new List<string>();
-            projectChangeLog = new List<Change>();
         }
 
         [System.ComponentModel.DisplayName("Project Name")]
@@ -62,12 +58,14 @@ namespace Project_manager
         public DateTime timeCreated //Project time created property manager (readonly). 
         {
             get { return ProjectCreationTime; }
+            set { ProjectCreationTime = value; }
         }
         
         [System.ComponentModel.DisplayName("Edited")]
         public DateTime timeEdited //Project time edited property manager (readonly). 
         {
             get { return ProjectLastEditTime; }
+            set { ProjectLastEditTime = value; }
         }
         
         [System.ComponentModel.DisplayName("Project Owner")]
@@ -117,7 +115,15 @@ namespace Project_manager
                 }
             }
         }
-
+        [System.ComponentModel.DisplayName("# of changes")]
+        [System.Xml.Serialization.XmlIgnore]
+        public string numOfChanges // project change property for display purposes. 
+        {
+            get
+            {
+                return projectChangeLog.Count.ToString();
+            }
+        }
         [System.ComponentModel.DisplayName("Latest Change")]
         [System.Xml.Serialization.XmlIgnore]
         public string latestChange // project change property for display purposes. 
@@ -140,6 +146,11 @@ namespace Project_manager
         public void addContributer(string name) // Function that allows for adding single contributors. 
         {
             projectContributors.Add(name);
+        }
+        public void addChange(Change c)
+        {
+            projectChangeLog.Add(c);
+            ProjectLastEditTime = DateTime.Now;
         }
     }
 

@@ -11,6 +11,9 @@ namespace Project_manager
         private string changeTitle;
         private string changeCreator;
         private string changeDescription;
+        private DateTime changeTime;
+        private object changeOldValue;
+        private object changeNewValue;
 
 
         public Change(string title, string creator, string description) // Main constructor.
@@ -18,10 +21,10 @@ namespace Project_manager
             changeTitle = title;
             changeCreator = creator;
             changeDescription = description;
+            changeTime = DateTime.Now;
         }
         public Change()
         {
-
         }
 
 
@@ -42,6 +45,23 @@ namespace Project_manager
             get { return changeDescription; }
             set { changeDescription = value; }
         }
-        
+
+        public DateTime time
+        {
+            get { return changeTime; }
+            set { changeTime = value; }
+        }
+
+        public object oldValue
+        {
+            get { return changeOldValue; }
+            set { changeOldValue = value; }
+        }
+
+        public object newValue
+        {
+            get { return changeNewValue; }
+            set { changeNewValue = value; }
+        }
     }
 }

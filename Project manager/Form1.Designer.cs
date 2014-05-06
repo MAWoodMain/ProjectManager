@@ -40,6 +40,7 @@
             this.btn_editProject = new System.Windows.Forms.Button();
             this.btn_addProject = new System.Windows.Forms.Button();
             this.lbl_projectsManagement = new System.Windows.Forms.Label();
+            this.btn_test = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_projects)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -73,6 +74,7 @@
             this.btn_import.TabIndex = 3;
             this.btn_import.Text = "Import";
             this.btn_import.UseVisualStyleBackColor = true;
+            this.btn_import.Click += new System.EventHandler(this.btn_import_Click);
             // 
             // btn_save
             // 
@@ -92,6 +94,7 @@
             this.btn_open.TabIndex = 1;
             this.btn_open.Text = "Open";
             this.btn_open.UseVisualStyleBackColor = true;
+            this.btn_open.Click += new System.EventHandler(this.btn_open_Click);
             // 
             // lbl_IO
             // 
@@ -153,11 +156,22 @@
             this.lbl_projectsManagement.TabIndex = 0;
             this.lbl_projectsManagement.Text = "Project management";
             // 
+            // btn_test
+            // 
+            this.btn_test.Location = new System.Drawing.Point(937, 427);
+            this.btn_test.Name = "btn_test";
+            this.btn_test.Size = new System.Drawing.Size(135, 23);
+            this.btn_test.TabIndex = 4;
+            this.btn_test.Text = "Test Button";
+            this.btn_test.UseVisualStyleBackColor = true;
+            this.btn_test.Click += new System.EventHandler(this.btn_test_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 462);
+            this.Controls.Add(this.btn_test);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv_projects);
@@ -191,6 +205,7 @@
         private System.Windows.Forms.Button btn_editProject;
         private System.Windows.Forms.Button btn_addProject;
         private System.Windows.Forms.Label lbl_projectsManagement;
+        private System.Windows.Forms.Button btn_test;
     }
 }
 
