@@ -73,6 +73,7 @@ namespace Project_manager
             System.Xml.Serialization.XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(Program.Projects.GetType());
             System.IO.StreamWriter file = new System.IO.StreamWriter("test.pmd");
             writer.Serialize(file, Program.Projects);
+            file.Close();
         }
 
         private void btn_open_Click(object sender, EventArgs e)
@@ -80,6 +81,7 @@ namespace Project_manager
             System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(Program.Projects.GetType());
             System.IO.StreamReader reader = new System.IO.StreamReader("test.pmd");
             Program.Projects = (List<Project>)serializer.Deserialize(reader);
+            reader.Close();
             INIT_dataGridView();
         }
 
